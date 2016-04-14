@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>NTPC Mobile App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+     
+        <style>
+body { 
+    background-image: url('./indiamap1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+.box {
+  width: 20%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 5px;
+  border: 2px solid #fff;
+  border-radius: 1px/2px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 1px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 0px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 1s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 50%;
+  }
+}
+</style>
+</head>
+    <body>
+<svg width="300" height="100">
+<defs>
+<marker id="arrow" markerWidth="13" markerHeight="13" refx="6" refy="6" orient="auto">
+<path d="M2,2 L2,9 L6,6 L2,2" style="fill: red;"/></marker>
+</defs>
+<path d="M500,143 L607,143" style="stroke:red; stroke-width: 1.25px; fill: none; marker-end: url(#arrow);"/>
+<path d="M500,143 L500,40" style="stroke:red; stroke-width: 1.25px; fill: none;"/>
+<path d="M500,40 L450,40" style="stroke:red; stroke-width: 1.25px; fill: none;"/>
+
+<path d="M497,182 L598,182" style="stroke:red; stroke-width: 1.25px; fill: none; marker-end: url(#arrow);"/>
+<path d="M497,182 L497,60" style="stroke:red; stroke-width: 1.25px; fill: none;"/>
+<path d="M497,60 L400,60" style="stroke:red; stroke-width: 1.25px; fill: none;"/>
+
+<path d="M494,192 L598,192" style="stroke:red; stroke-width: 1.25px; fill: none; marker-end: url(#arrow);"/>
+<path d="M494,192 L494,80" style="stroke:red; stroke-width: 1.25px; fill: none;"/>
+<path d="M494,80 L400,80" style="stroke:red; stroke-width: 1.25px; fill: none;"/>
+
+<path d="M491,197 L600,197" style="stroke:red; stroke-width: 1.25px; fill: none; marker-end: url(#arrow);"/>
+<path d="M491,197 L491,100" style="stroke:red; stroke-width: 1.25px; fill: none;"/>
+<path d="M491,100 L400,100" style="stroke:red; stroke-width: 1.25px; fill: none;"/>
+
+<path d="M488,250 L575,250" style="stroke:red; stroke-width: 1.25px; fill: none; marker-end: url(#arrow);"/>
+<path d="M488,250 L488,120" style="stroke:red; stroke-width: 1.25px; fill: none;"/>
+<path d="M488,120 L400,120" style="stroke:red; stroke-width: 1.25px; fill: none;"/>
+
+<path d="M485,305 L528,305" style="stroke:red; stroke-width: 1.25px; fill: none; marker-end: url(#arrow);"/>
+<path d="M485,305 L485,140" style="stroke:red; stroke-width: 1.25px; fill: none;"/>
+<path d="M485,140 L400,140" style="stroke:red; stroke-width: 1.25px; fill: none;"/>
+
+<path d="M482,320 L525,320" style="stroke:red; stroke-width: 1.25px; fill: none; marker-end: url(#arrow);"/>
+<path d="M482,320 L482,160" style="stroke:red; stroke-width: 1.25px; fill: none;"/>
+<path d="M482,160 L400,160" style="stroke:red; stroke-width: 1.25px; fill: none;"/>
+</svg>
+
+<div style="position:absolute; left:615px; top:143px; font-size: 15px;">
+           &bull;
+</div>
+      <a class='button' href="#popup1" style="position:absolute; left:400px; top:40px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      &nbsp;KOLDAM
+      </a>
+
+<div style="position:absolute; left:607px; top:182px; font-size: 15px;">
+           &bull;
+</div>
+      <a class='button' href="#popup2" style="position:absolute; left:400px; top:60px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      &nbsp;DADRI
+      </a>
+
+<div style="position:absolute; left:606px; top:192px; font-size: 15px;">
+           &bull;
+</div>
+      <a class='button' href="#popup2" style="position:absolute; left:400px; top:80px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      &nbsp;BADARPUR
+      </a>
+
+<div style="position:absolute; left:608px; top:197px; font-size: 15px;">
+           &bull;
+</div>
+      <a class='button' href="#popup2" style="position:absolute; left:400px; top:100px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      &nbsp;FARIDABAD
+      </a>
+
+<div style="position:absolute; left:584px; top:250px; font-size: 15px;">
+           &bull;
+</div>
+      <a class='button' href="#popup2" style="position:absolute; left:400px; top:120px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      &nbsp;ANTA
+      </a>
+
+
+
+<div style="position:absolute; left:535px; top:305px; font-size: 15px;">
+           &bull;
+</div>
+      <a class='button' href="#popup2" style="position:absolute; left:400px; top:140px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      &nbsp;JHANOR
+      </a>
+
+
+
+<div style="position:absolute; left:533px; top:320px; font-size: 15px;">
+           &bull;
+</div>
+      <a class='button' href="#popup2" style="position:absolute; left:400px; top:160px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      &nbsp;KAWAS
+      </a>
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>KOLDAM (Hydro)</h2>
+		<a class="close" href="index.html">&times;</a>
+		<div id="koldam" class="content">
+			
+		</div>
+	</div>
+</div>
+
+<div id="popup2" class="overlay">
+	<div class="popup">
+		<h2>DADRI (Thermal)</h2>
+		<a class="close" href="index.html">&times;</a>
+		<div id="dadri" class="content">
+			
+		</div>
+	</div>
+</div>
+        
+        
+<script>
+displayCD(0);
+
+function displayCD(i) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            myFunction(xmlhttp, i);
+        }
+    };
+    xmlhttp.open("GET", "cd_catalog.xml", true);
+    xmlhttp.send();
+}
+
+function myFunction(xml, i) {
+    var xmlDoc = xml.responseXML; 
+    x = xmlDoc.getElementsByTagName("CD");
+    document.getElementById("koldam").innerHTML =
+    "<table><tr><td><table><tr><td>DC : " +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
+    " MW<br>SG : " +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
+    " MW<br>URS: " + 
+    x[i].getElementsByTagName("URS")[0].childNodes[0].nodeValue +
+    " MW<br></td></tr></table></td><td>Unit 1 : " + 
+    x[i].getElementsByTagName("U1")[0].childNodes[0].nodeValue +
+    " MW<br>Unit 2 : " + 
+    x[i].getElementsByTagName("U2")[0].childNodes[0].nodeValue +
+    " MW<br>Unit 3 : " + 
+    x[i].getElementsByTagName("U3")[0].childNodes[0].nodeValue +
+    " MW<br></td><tr><td colsapn='2'>Total Allocation : " + 
+    x[i].getElementsByTagName("TOTALALLOC")[0].childNodes[0].nodeValue +" MW</td></tr></table>";
+	i++;
+document.getElementById("dadri").innerHTML =
+    "DC : " +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
+    " MW<br>SG : " +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
+    " MW<br>URS: " + 
+    x[i].getElementsByTagName("URS")[0].childNodes[0].nodeValue +
+    " MW<br>Total Allocation : " + 
+    x[i].getElementsByTagName("TOTALALLOC")[0].childNodes[0].nodeValue +" MW";
+}
+</script>       
+        
+    </body>
+</html>
