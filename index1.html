@@ -28,11 +28,11 @@ body {
 }
 
 .button {
-  font-size: 1em;
-  padding: 1px;
+  font-size: 8px;
+  padding: 0px;
   color: #fff;
-  border: 2px solid #06D85F;
-  border-radius: 20px/50px;
+  border: 1px solid #06D85F;
+  border-radius: 10px/25px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease-out;
@@ -45,8 +45,8 @@ body {
   position: absolute;
   margin: 0 0 0 0;
   padding:0 0 0 0;
-  width: 100%;
-  height: 100%;
+  width: inherit;
+  height: inherit;
   background: rgba(0, 0, 0, 0.7);
   transition: opacity 500ms;
   visibility: hidden;
@@ -73,13 +73,15 @@ body {
   margin-top: 0;
   color: #333;
   font-family: Tahoma, Arial, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
 }
 .popup .close {
   position: absolute;
   top: 0px;
   right: 15px;
   transition: all 200ms;
-  font-size: 30px;
+  font-size: 15px;
   font-weight: bold;
   text-decoration: none;
   color: #333;
@@ -99,35 +101,35 @@ body {
     
 
 
-<div style="position:absolute; left:372px; top:215px; font-size: 15px;">
+<div style="position:absolute; left:115px; top:70px; font-size: 15px;">
            &bull;
 </div>
-      <a class='button' href="#popup1" style="position:absolute; left:378px; top:215px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      <a class='button' href="#popup1" style="position:absolute; left:118px; top:70px; background: rgba(50, 25, 200, .7); font-size: 8px; color: #ebf1fd;">
       &nbsp;KOLDAM
       </a>
 
-<div style="position:absolute; left:380px; top:300px; font-size: 15px;">
+<div style="position:absolute; left:116px; top:105px; font-size: 15px;">
            &bull;
 </div>
       <a class='button' href="#popup2" style="position:absolute; left:386px; top:300px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
       &nbsp;DADRI
       </a>
 
-<div style="position:absolute; left:362px; top:305px; font-size: 15px;">
+<div style="position:absolute; left:109px; top:108px; font-size: 15px;">
            &bull;
 </div>
       <a class='button' href="#popup2" style="position:absolute; left:297px; top:305px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
       &nbsp;BADARPUR
       </a>
 
-<div style="position:absolute; left:370px; top:315px; font-size: 15px;">
+<div style="position:absolute; left:113px; top:112px; font-size: 15px;">
            &bull;
 </div>
       <a class='button' href="#popup2" style="position:absolute; left:377px; top:315px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
       &nbsp;FARIDABAD
       </a>
 
-<div style="position:absolute; left:330px; top:415px; font-size: 15px;">
+<div style="position:absolute; left:95px; top:150px; font-size: 15px;">
            &bull;
 </div>
       <a class='button' href="#popup2" style="position:absolute; left:294px; top:415px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
@@ -136,7 +138,7 @@ body {
 
 
 
-<div style="position:absolute; left:248px; top:500px; font-size: 15px;">
+<div style="position:absolute; left:63px; top:185px; font-size: 15px;">
            &bull;
 </div>
       <a class='button' href="#popup2" style="position:absolute; left:200px; top:500px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
@@ -145,14 +147,14 @@ body {
 
 
 
-<div style="position:absolute; left:233px; top:525px; font-size: 15px;">
+<div style="position:absolute; left:60px; top:200px; font-size: 15px;">
            &bull;
 </div>
       <a class='button' href="#popup2" style="position:absolute; left:185px; top:525px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
       &nbsp;KAWAS
       </a>
       
-      <div style="position:absolute; left:233px; top:925px; font-size: 15px;">
+      <div style="position:absolute; left:102px; top:355px; font-size: 15px;">
            &bull;
 </div>
       <a class='button' href="#popup2" style="position:absolute; left:185px; top:925px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
@@ -160,7 +162,7 @@ body {
       </a>
 
 <div id="popup1" class="overlay">
-	<div class="popup" style="position:absolute; left:273px; top:200px;">
+	<div class="popup" style="position:absolute; left:100px; top:65px;">
 		<h2>KOLDAM (Hydro)</h2>
 		<a class="close" href="index1.html">&times;</a>
 		<div id="koldam" class="content">
@@ -170,7 +172,7 @@ body {
 </div>
 
 <div id="popup2" class="overlay">
-	<div class="popup" style="position:absolute; left:273px; top:200px; width:200px;">
+	<div class="popup" style="position:absolute; left:10%; top:200px; width:200px;">
 		<h2>DADRI (Thermal)</h2>
 		<a class="close" href="index1.html">&times;</a>
 		<div id="dadri" class="content">
@@ -178,8 +180,7 @@ body {
 		</div>
 	</div>
 </div>
-        
-   
+           
 <script>
 displayCD(0);
 
