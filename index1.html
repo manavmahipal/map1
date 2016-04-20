@@ -118,21 +118,21 @@ body {
 <div style="position:absolute; left:109px; top:108px; font-size: 15px;">
            &bull;
 </div>
-      <a class='button' href="#popup2" style="position:absolute; left:55px; top:102px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      <a class='button' href="#popup3" style="position:absolute; left:55px; top:102px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
       &nbsp;BADARPUR
       </a>
 
 <div style="position:absolute; left:113px; top:112px; font-size: 15px;">
            &bull;
 </div>
-      <a class='button' href="#popup2" style="position:absolute; left:53px; top:118px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      <a class='button' href="#popup4" style="position:absolute; left:53px; top:118px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
       &nbsp;FARIDABAD
       </a>
 
 <div style="position:absolute; left:95px; top:150px; font-size: 15px;">
            &bull;
 </div>
-      <a class='button' href="#popup2" style="position:absolute; left:64px; top:150px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      <a class='button' href="#popup5" style="position:absolute; left:64px; top:150px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
       &nbsp;ANTA
       </a>
 
@@ -141,7 +141,7 @@ body {
 <div style="position:absolute; left:63px; top:185px; font-size: 15px;">
            &bull;
 </div>
-      <a class='button' href="#popup2" style="position:absolute; left:20px; top:185px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      <a class='button' href="#popup6" style="position:absolute; left:20px; top:185px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
       &nbsp;JHANOR
       </a>
 
@@ -150,14 +150,14 @@ body {
 <div style="position:absolute; left:60px; top:200px; font-size: 15px;">
            &bull;
 </div>
-      <a class='button' href="#popup2" style="position:absolute; left:19px; top:200px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      <a class='button' href="#popup7" style="position:absolute; left:19px; top:200px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
       &nbsp;KAWAS
       </a>
       
       <div style="position:absolute; left:102px; top:355px; font-size: 15px;">
            &bull;
 </div>
-      <a class='button' href="#popup2" style="position:absolute; left:35px; top:355px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      <a class='button' href="#popup8" style="position:absolute; left:35px; top:355px; background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
       &nbsp;KAYAMKULAM
       </a>
 
@@ -180,7 +180,62 @@ body {
 		</div>
 	</div>
 </div>
-           
+    
+    
+<div id="popup3" class="overlay">
+	<div class="popup" style="position:absolute; left:10%; top:200px; width:200px;">
+		<h2>Badarpur</h2>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="badarpur" class="content">
+			
+		</div>
+	</div>
+</div>
+<div id="popup4" class="overlay">
+	<div class="popup" style="position:absolute; left:10%; top:200px; width:200px;">
+		<h2>Faridabad</h2>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="faridabad" class="content">
+			
+		</div>
+	</div>
+</div>
+<div id="popup5" class="overlay">
+	<div class="popup" style="position:absolute; left:10%; top:200px; width:200px;">
+		<h2>Anta</h2>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="anta" class="content">
+			
+		</div>
+	</div>
+</div>
+<div id="popup6" class="overlay">
+	<div class="popup" style="position:absolute; left:10%; top:200px; width:200px;">
+		<h2>Jhanor</h2>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="jhanor" class="content">
+			
+		</div>
+	</div>
+</div>
+<div id="popup7" class="overlay">
+	<div class="popup" style="position:absolute; left:10%; top:200px; width:200px;">
+		<h2>Kawas</h2>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="kawas" class="content">
+			
+		</div>
+	</div>
+</div>
+<div id="popup8" class="overlay">
+	<div class="popup" style="position:absolute; left:10%; top:200px; width:200px;">
+		<h2>Kayamkullam</h2>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="kayamkullam" class="content">
+			
+		</div>
+	</div>
+</div>       
 <script>
 displayCD(0);
 
@@ -208,6 +263,55 @@ function myFunction(xml, i) {
     " MW<br>";
 	i++;
 document.getElementById("dadri").innerHTML =
+    "DC : " +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
+    " MW<br>SG : " +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
+    " MW<br>URS: " + 
+    x[i].getElementsByTagName("URS")[0].childNodes[0].nodeValue +
+    " MW<br>";
+    i++;
+document.getElementById("badarpur").innerHTML =
+    "DC : " +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
+    " MW<br>SG : " +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
+    " MW<br>URS: " + 
+    x[i].getElementsByTagName("URS")[0].childNodes[0].nodeValue +
+    " MW<br>";i++;
+document.getElementById("faridabad").innerHTML =
+    "DC : " +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
+    " MW<br>SG : " +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
+    " MW<br>URS: " + 
+    x[i].getElementsByTagName("URS")[0].childNodes[0].nodeValue +
+    " MW<br>";i++;
+document.getElementById("anta").innerHTML =
+    "DC : " +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
+    " MW<br>SG : " +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
+    " MW<br>URS: " + 
+    x[i].getElementsByTagName("URS")[0].childNodes[0].nodeValue +
+    " MW<br>";i++;
+document.getElementById("jhanor").innerHTML =
+    "DC : " +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
+    " MW<br>SG : " +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
+    " MW<br>URS: " + 
+    x[i].getElementsByTagName("URS")[0].childNodes[0].nodeValue +
+    " MW<br>";i++;
+document.getElementById("kawas").innerHTML =
+    "DC : " +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
+    " MW<br>SG : " +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
+    " MW<br>URS: " + 
+    x[i].getElementsByTagName("URS")[0].childNodes[0].nodeValue +
+    " MW<br>";i++;
+document.getElementById("kayamkullam").innerHTML =
     "DC : " +
     x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
     " MW<br>SG : " +
