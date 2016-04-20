@@ -14,7 +14,7 @@ body {
     background-repeat: no-repeat;
             background-size: cover;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 .box {
   width: 100%;
@@ -199,20 +199,13 @@ function myFunction(xml, i) {
     var xmlDoc = xml.responseXML; 
     x = xmlDoc.getElementsByTagName("CD");
     document.getElementById("koldam").innerHTML =
-    "<table><tr><td><table><tr><td>DC : " +
+    "DC : " +
     x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
     " MW<br>SG : " +
     x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
     " MW<br>URS: " + 
     x[i].getElementsByTagName("URS")[0].childNodes[0].nodeValue +
-    " MW<br></td></tr></table></td><td>Unit 1 : " + 
-    x[i].getElementsByTagName("U1")[0].childNodes[0].nodeValue +
-    " MW<br>Unit 2 : " + 
-    x[i].getElementsByTagName("U2")[0].childNodes[0].nodeValue +
-    " MW<br>Unit 3 : " + 
-    x[i].getElementsByTagName("U3")[0].childNodes[0].nodeValue +
-    " MW<br></td><tr><td colsapn='2'>Total Allocation : " + 
-    x[i].getElementsByTagName("TOTALALLOC")[0].childNodes[0].nodeValue +" MW</td></tr></table>";
+    " MW<br>";
 	i++;
 document.getElementById("dadri").innerHTML =
     "DC : " +
@@ -221,8 +214,7 @@ document.getElementById("dadri").innerHTML =
     x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
     " MW<br>URS: " + 
     x[i].getElementsByTagName("URS")[0].childNodes[0].nodeValue +
-    " MW<br>Total Allocation : " + 
-    x[i].getElementsByTagName("TOTALALLOC")[0].childNodes[0].nodeValue +" MW";
+    " MW<br>";
 }
 </script>       
         
