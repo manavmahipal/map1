@@ -18,22 +18,22 @@ body {
     overflow-y: scroll;
 }
 .box {
-  width: 100%;
+  width: 20%;
   margin: 0 auto;
   background: rgba(255,255,255,0.2);
-  padding: .5%;
-  border: .2% solid #fff;
-  border-radius: .1%/.2%;
+  padding: 5px;
+  border: 2px solid #fff;
+  border-radius: 1px/2px;
   background-clip: padding-box;
   text-align: center;
 }
 
 .button {
-  font-size: .8%;
-  padding: 0px;
+  font-size: 1em;
+  padding: 1px;
   color: #fff;
-  border: .1% solid #06D85F;
-  border-radius: 1%/2.5%;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease-out;
@@ -44,28 +44,26 @@ body {
 
 .overlay {
   position: absolute;
-  margin: 0 0 0 0;
-  padding:0 0 0 0;
-  width: inherit;
-  height: inherit;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: rgba(0, 0, 0, 0.7);
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
 }
 .overlay:target {
-	width: 100%;
-  height: 100%;
   visibility: visible;
   opacity: 1;
 }
 
 .popup {
-  margin: 7.0% auto;
+  margin: 70px auto;
   padding: 0px;
   background: #fff;
-  border-radius: .5%;
-  width: 50%;
+  border-radius: 5px;
+  width: 30%;
   position: relative;
   transition: all 1s ease-in-out;
 }
@@ -74,15 +72,13 @@ body {
   margin-top: 0;
   color: #333;
   font-family: Tahoma, Arial, sans-serif;
-            font-size: 15px;
-            font-weight: bold;
 }
 .popup .close {
   position: absolute;
   top: 0px;
-  right: 1.5%;
+  right: 15px;
   transition: all 200ms;
-  font-size: 15px;
+  font-size: 30px;
   font-weight: bold;
   text-decoration: none;
   color: #333;
@@ -95,20 +91,17 @@ body {
   overflow: auto;
 }
 
-
+</style>
 </style>
 </head>
     <body>
   
-      <a class='button' href="./index1.html" style="position:relative; left:20%; top:20%; background: rgba(50, 25, 200, .7); font-size: 8px; color: #ebf1fd;">
-      &nbsp;refresh
-      </a>  
+     
 
-
-<div style="position:fixed; left:237px; top:120px; font-size: 15px;">
+<div style="position:fixed; left:237px; top:145px; font-size: 15px;">
            &bull;
 </div>
-      <a class='button' href="#koldampop" style="position:fixed; left:242px; top:120px;; background: rgba(50, 25, 200, .7); font-size: 8px; color: #ebf1fd;">
+      <a class='button' href="#koldampop" style="position:fixed; left:242px; top:145px;; background: rgba(50, 25, 200, .7); font-size: 8px; color: #ebf1fd;">
       &nbsp;KOLDAM
       </a>
 
