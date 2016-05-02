@@ -576,9 +576,23 @@ function myFunction(xml, i) {
     x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
     " MW<br>URS: " + 
     (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
+    " MW<br>DC : " +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
+    " MW<br>SG : " +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
+    " MW<br>URS: " + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
+    " MW<br>DC : " +
+    x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
+    " MW<br>SG : " +
+    x[i+2].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
+    " MW<br>URS: " + 
+    (x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
     " MW<br>";
 	i++;
-    document.getElementById("singrauli").innerHTML =
+	i++;
+	i++;
+    document.getElementById("tanda").innerHTML =
     "DC : " +
     x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
     " MW<br>SG : " +
@@ -587,7 +601,7 @@ function myFunction(xml, i) {
     (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
     " MW<br>";
 	i++;
-    document.getElementById("singrauli").innerHTML =
+    document.getElementById("badarpur").innerHTML =
     "DC : " +
     x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
     " MW<br>SG : " +
@@ -596,7 +610,23 @@ function myFunction(xml, i) {
     (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
     " MW<br>";
 	i++;
-    document.getElementById("singrauli").innerHTML =
+    document.getElementById("dadri").innerHTML =
+    "DC : " +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
+    " MW<br>SG : " +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
+    " MW<br>URS: " + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
+    " MW<br>DC : " +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
+    " MW<br>SG : " +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
+    " MW<br>URS: " + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
+    " MW<br>";
+	i++;
+	i++;
+    document.getElementById("auraiya").innerHTML =
     "DC : " +
     x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
     " MW<br>SG : " +
@@ -605,16 +635,7 @@ function myFunction(xml, i) {
     (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
     " MW<br>";
 	i++;
-    document.getElementById("singrauli").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
-	i++;
-    document.getElementById("singrauli").innerHTML =
+    document.getElementById("anta").innerHTML =
     "DC : " +
     x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
     " MW<br>SG : " +
