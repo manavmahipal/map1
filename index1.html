@@ -537,13 +537,13 @@ function displayCD(i) {
 function myFunction(xml, i) {
     var xmlDoc = xml.responseXML; 
     x = xmlDoc.getElementsByTagName("CD");
-    document.getElementById("koldam").innerHTML =
+    document.getElementById("singrauli").innerHTML =
     "DC : " +
     x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
     " MW<br>SG : " +
     x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
     " MW<br>URS: " + 
-    x[i].getElementsByTagName("URS")[0].childNodes[0].nodeValue +
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
     " MW<br>";
 	i++;
 document.getElementById("dadri").innerHTML =
