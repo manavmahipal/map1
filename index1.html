@@ -536,7 +536,7 @@ function displayCD(i) {
 
 function myFunction(xml, i) {
     var xmlDoc = xml.responseXML; 
-    x = xmlDoc.getElementsByTagName("CD");
+    x = xmlDoc.getElementsByTagName("STATION");
     document.getElementById("singrauli").innerHTML =
     "DC : " +
     x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
