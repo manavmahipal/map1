@@ -276,9 +276,9 @@ width: 100%;
 </div>
       
 <div id="koldampop" class="overlay">
-	<div class="popup" style="position:absolute; left:25%; top:10%; width:30%;border:1px solid #fffff2;">
+	<div class="popup" style="position:absolute; left:25%; top:10%; width:30%;">
 	<h3>Koldam</h3><a class="close" href="index1.html">&times;</a>
-		<div id="koldam" class="content" syle="border:1px solid #ff2982;"></div>
+		<div id="koldam" class="content" ></div>
 	</div>
 </div>
 
@@ -844,7 +844,7 @@ function myFunction(xml, i) {
 	i++;
 	i++;
     document.getElementById("koldam").innerHTML =
-    "<table style='text-align:center;border:1px solid #ff2982;width:100%''><tr ><td>DC</td><td>SG</td><td>URS</td></tr><tr><td>" +
+    "<table style='text-align:center;border:1px solid #ff2982;'><tr ><td>DC</td><td>SG</td><td>URS</td></tr><tr><td>" +
     x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"MW</td><td>" +
     x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"MW</td><td>" + 
     (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"MW</td></tr></table>";
