@@ -64,17 +64,17 @@ height:0;
     </td></tr>
     <tr style="height:33%;"><td align="center" >
         <table cellpadding="0" cellspacing="0" style="height:100%; width:100%; ">
-        	<tr><td style="border-bottom: 1px dotted #1d41b7; width:33%;text-align: left;font-size: 105%;">&nbsp;Block : <b><u><div id="timeblock" style="display: inline-block; font-size: 105%;">00</div></u></b>
+        	<tr><td style="border-bottom: 1px dotted #1d41b7; width:33%;text-align: left;font-size: 105%;">&nbsp;Block : <b><u><div id="timeblock" style="display: inline-block; font-size: 105%;"></div></u></b>
         	</td><td style="border-bottom: 1px dotted #1d41b7;font-size: 105%; width:33%;text-align: center;">
-        	UI Rate : <b><u><div id="uirate" style="display: inline-block; font-size: 105%;">00</div></u></b>Hz&nbsp;
+        	UI Rate : <b><u><div id="uirate" style="display: inline-block; font-size: 105%;"></div></u></b>Hz&nbsp;
         	</td><td style="border-bottom: 1px dotted #1d41b7;font-size: 105%; width:33%;text-align: right;">
-        	Freq : <b><u><div id="freq" style="display: inline-block; font-size: 105%;">00</div></u></b>Hz&nbsp;
+        	Freq : <b><u><div id="freq" style="display: inline-block; font-size: 105%;"></div></u></b>Hz&nbsp;
         	</td></tr></table>
     </td></tr>
     <tr style="height:33%;"><td align="center" >
         <table cellpadding="0" cellspacing="0" style="height:100%; width:100%; ">
-        	<tr><td style="border-bottom: 1px dotted #1d41b7; width:100%;text-align: left;font-size: 105%;">&nbsp;Total NTPC : Scheduled(SG) = <b><u><div id="scheduled" style="display: inline-block; font-size: 105%;">00</div></u></b>&nbsp;MW
-&nbsp;Available(DC) = <b><u><div id="available" style="display: inline-block; font-size: 105%;">00</div></u></b>&nbsp;MW       
+        	<tr><td style="border-bottom: 1px dotted #1d41b7; width:100%;text-align: left;font-size: 105%;">&nbsp;Total NTPC : Scheduled(SG) = <b><u><div id="scheduled" style="display: inline-block; font-size: 105%;"></div></u></b>&nbsp;MW
+&nbsp;Available(DC) = <b><u><div id="available" style="display: inline-block; font-size: 105%;"></div></u></b>&nbsp;MW       
 </td></tr></table>
     </td></tr>
 </table>
@@ -294,13 +294,13 @@ color: 'black',
 $('#scheduled').NylAutoWriter({
 color: 'black',
     mask: '0123456789',
-    iterations : 10000,
+    iterations : 100,
 	
 });
 $('#available').NylAutoWriter({
 color: 'black',
     mask: '0123456789',
-    iterations : 10000,
+    iterations : 100,
 	
 });
 </script>
