@@ -1,71 +1,23 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=.5, maximum-scale=12.0, minimum-scale=.25, user-scalable=yes"/>
-<meta http-equiv="refresh" content="5000">
-
-		<title>NTPC Mobile app</title>
-
-
+    <meta charset="utf-8" />
+    <title>JSON Sample</title>
 </head>
-<body style="background-color:#B1F3FC;margin-top:-3%;padding-top:0px">
-
-
-<table cellpadding="0" cellspacing="0" style="border: none;height:100%; width:100%;margin-top:-2%;padding-top:0px ">
-   
-    <tr style="border: none;height:33%;"><td align="center" >
-        <table cellpadding="0" cellspacing="0" style="border:none;;height:100%; width:100%; ">
-        	<tr><td style="border-bottom: 1px dotted #1d41b7; width:33%;text-align: left;font-size: 130%;">&nbsp;&nbsp;Block : <b><u><div id="timeblock" style="display: inline-block; font-size: 130%;">00</div></u></b>
-        	</td><td style="border-bottom: 1px dotted #1d41b7;font-size: 130%; width:33%;text-align: center;">
-        	UI Rate : <b><u><div id="uirate" style="display: inline-block; font-size: 130%;">00</div></u></b>Hz&nbsp;&nbsp;&nbsp;
-        	</td><td style="border-bottom: 1px dotted #1d41b7;font-size: 130%; width:33%;text-align: right;">
-        	Freq : <b><u><div id="freq" style="display: inline-block; font-size: 130%;">00</div></u></b>Hz&nbsp;&nbsp;&nbsp;
-        	</td></tr></table>
-    </td></tr>
-    <tr style="border: none;height:33%;"><td align="center" >
-        <table cellpadding="0" cellspacing="0" style="border:none;;height:100%; width:100%; ">
-        	<tr><td style="border-bottom: 1px dotted #1d41b7; width:100%;text-align: left;font-size: 130%;">&nbsp;&nbsp;Total NTPC : Scheduled (SG) = <b><u><div id="scheduled" style="display: inline-block; font-size: 130%;">000</div></u></b>&nbsp;MW
-&nbsp;&nbsp;&nbsp;&nbsp;Available (DC) = <b><u><div id="available" style="display: inline-block; font-size: 130%;">000</div></u></b>&nbsp;MW       
-</td></tr></table>
-    </td></tr>
-</table>
-
-<table><tr><td><div id="available1"></div></td><td><div id="scheduled1"></div></td></tr>
-<tr style="border: 1px solid #574278;"><tdstyle="border: 1px solid #574278;"><div id="available11"></div></td><tdstyle="border: 1px solid #574278;"><div id="scheduled11"></div></td></tr></table>
-	
-<script>
-displayCD(0);
-function displayCD(i) {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            myFunction(xmlhttp, i);
+<body>
+    <div id="placeholder"></div>
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script>
+    var jsonApi = "http://www.indianpowerstations.org/wap/xmltojson.asp"
+	$.getJSON(jsonApi, function(data) {
+        var output="<ul>";
+        for (var i in jsonApi.results) {
+            output+="<li>" + data.results[i].name + " " + data.results[i].lastname + "--" + data.results[i].address+"</li>";
         }
-    };
-    xmlhttp.open("GET", "./appview.xml", true);
-    xmlhttp.send();
-}
-function myFunction(xml, i) {
-	var sumdc,sumsg;
-	var sumdcc=0;
-	var sumsgg=0;
-    var xmlDoc = xml.responseXML; 
-    x = xmlDoc.getElementsByTagName("STATION");
-    //xLen = x.length;
-    document.getElementById("freq").innerHTML = x[9].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
-     document.getElementById("timeblock").innerHTML = x[9].getElementsByTagName("BLK")[0].childNodes[0].nodeValue;
- 
-for (i = 0; i<=47; i++) {
-sumdc += x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue+"<br/>";
-sumsg += x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue+"<br/>";
-   sumdcc += parseInt(x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue);
-    sumsgg += parseInt(x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue);
-}
-    document.getElementById("available1").innerHTML=sumdc;
-    document.getElementById("scheduled1").innerHTML=sumsg;
-    document.getElementById("available11").innerHTML=sumdcc;
-    document.getElementById("scheduled11").innerHTML=sumsgg;
-}
-</script>
 
-
-</body></html>
+        output+="</ul>";
+        document.getElementById("placeholder").innerHTML=output;
+  });
+    </script>
+</body>
+</html>
