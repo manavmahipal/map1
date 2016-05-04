@@ -29,7 +29,8 @@
     </td></tr>
 </table>
 
-<table><tr><td><div id="available1"></div></td><td><div id="scheduled1"></div></td></tr></table>
+<table><tr><td><div id="available1"></div></td><td><div id="scheduled1"></div></td></tr>
+<tr style="border: 1px solid #574278;"><tdstyle="border: 1px solid #574278;"><div id="available11"></div></td><tdstyle="border: 1px solid #574278;"><div id="scheduled11"></div></td></tr></table>
 	
 <script>
 displayCD(0);
@@ -44,8 +45,9 @@ function displayCD(i) {
     xmlhttp.send();
 }
 function myFunction(xml, i) {
-	var sumdc=0;
-	var sumsg=0;
+	var sumdc,sumsg;
+	var sumdcc=0;
+	var sumsgg=0;
     var xmlDoc = xml.responseXML; 
     x = xmlDoc.getElementsByTagName("STATION");
     document.getElementById("freq").innerHTML = x[9].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
@@ -54,11 +56,13 @@ function myFunction(xml, i) {
 for (i = 0; i<=32; i++) {
 sumdc += x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue+"<br/>";
 sumsg += x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue+"<br/>";
-  //  sumdc += parseInt(x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue);
- //   sumsg += parseInt(x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue);
+   sumdcc += parseInt(x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue);
+    sumsgg += parseInt(x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue);
 }
     document.getElementById("available1").innerHTML=sumdc;
     document.getElementById("scheduled1").innerHTML=sumsg;
+    document.getElementById("available11").innerHTML=sumdcc;
+    document.getElementById("scheduled11").innerHTML=sumsgg;
 }
 </script>
 
