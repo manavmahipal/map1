@@ -841,7 +841,7 @@ function myFunction(xml, i) {
 	i++;
 	i++;
     document.getElementById("koldam").innerHTML =
-    "<table style='text-align:center;border:1px solid #ff2982;'><tr ><td>DC</td><td>SG</td><td>URS</td></tr><tr><td>" +
+    "<table align='center' style='text-align:center;border:1px solid #ff2982;width:100%;'><tr ><td>DC</td><td>SG</td><td>URS</td></tr><tr><td>" +
     x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"MW</td><td>" +
     x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"MW</td><td>" + 
     (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"MW</td></tr></table>";
