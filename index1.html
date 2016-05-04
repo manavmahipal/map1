@@ -841,9 +841,9 @@ function myFunction(xml, i) {
 	i++;
 	i++;
     document.getElementById("koldam").innerHTML =
-    "<table align='center' style='text-align:center;border:1px solid #ff2982;width:100%;'><tr ><td>DC</td><td>SG</td><td>URS</td></tr><tr><td>" +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"MW</td><td>" +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"MW</td><td>" + 
+    "<table align='center' style='text-align:center;width:90%;'><tr><td style='background: #f4e9cc;'><b>DC</b></td><td style='background: #c8f4f3;'><b>SG</b></td><td  style='background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"MW</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"MW</td><td style='background: #d0f4c8;'>" + 
     (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"MW</td></tr></table>";
 	i++;
     document.getElementById("bongaigaon").innerHTML =
