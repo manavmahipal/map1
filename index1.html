@@ -543,11 +543,11 @@ function myFunction(xml, i) {
     x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
     x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
     (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
-    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
     x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
     x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
     (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
-    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - III</b></td></tr><tr><td style='background: #f4e9cc;'>" +
     x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
     x[i+2].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
     (x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
@@ -555,280 +555,198 @@ function myFunction(xml, i) {
 	i++;
 	i++;
     document.getElementById("unchahar").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>DC : " +
-    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>DC : " +
-    x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i+2].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
-	i++;
+     "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - III</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+2].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+       	i++;
 	i++;
 	i++;
     document.getElementById("tanda").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+     "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
     document.getElementById("badarpur").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+   "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
     document.getElementById("dadri").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>DC : " +
-    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
-	i++;
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - III</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+2].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+       	i++;
 	i++;
     document.getElementById("auraiya").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
     document.getElementById("anta").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+   "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
 	i++;
     document.getElementById("faridabad").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+   "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
     document.getElementById("korba").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>DC : " +
-    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
-	i++;
+     "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>";
+     i++;
 	i++;
     document.getElementById("vindhyachal").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>DC : " +
-    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>DC : " +
-    x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i+2].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>DC : " +
-    x[i+3].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i+3].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i+3].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";"DC : " +
-    x[i+4].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i+4].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i+4].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+     "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+2].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+3].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+3].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+3].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - III</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+4].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+4].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+4].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
 	i++;
 	i++;
 	i++;
 	i++;
     document.getElementById("sipat").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>DC : " +
-    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
-	i++;
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+      	i++;
 	i++;
     document.getElementById("kawas").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+   "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
     document.getElementById("jhanor").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+   "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
     document.getElementById("farakka").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>DC : " +
-    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
 	i++;
     document.getElementById("kahalgaon").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>DC : " +
-    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+   "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
 	i++;
-    document.getElementById("talcher").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>DC : " +
-    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";"DC : " +
-    x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i+2].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+    document.getElementById("kaniha").innerHTML =
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+     i++;
 	i++;
-	i++;
+	document.getElementById("talcher").innerHTML =
+"<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
     document.getElementById("barh").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+   "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
     document.getElementById("ramagundam").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>DC : " +
-    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+     "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
 	i++;
     document.getElementById("kayamkullam").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+  "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
     document.getElementById("simhadri").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>DC : " +
-    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+     "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
 	i++;
     document.getElementById("koldam").innerHTML =
@@ -838,74 +756,51 @@ function myFunction(xml, i) {
     (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
     document.getElementById("bongaigaon").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
     document.getElementById("mauda").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>DC : " +
-    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
 	i++;
     document.getElementById("kanti").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
     document.getElementById("ratnagiri").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
     document.getElementById("bhilai").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
     document.getElementById("jhajjhar").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
     document.getElementById("vallur").innerHTML =
-    "DC : " +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
 	i++;
 }
 </script>       
