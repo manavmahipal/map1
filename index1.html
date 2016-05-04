@@ -848,12 +848,9 @@ function myFunction(xml, i) {
 	i++;
     document.getElementById("koldam").innerHTML =
     "<table><tr syle='border:1px solid #ff2982;'><td>DC</td><td>SG</td><td>URS</td></tr><tr><td>" +
-    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW</td><td>" +
-    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW</td><td>" + 
-    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW</td></tr></table>";
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"MW</td><td>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"MW</td><td>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"MW</td></tr></table>";
 	i++;
     document.getElementById("bongaigaon").innerHTML =
     "DC : " +
