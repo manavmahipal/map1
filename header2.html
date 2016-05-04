@@ -181,13 +181,14 @@ function displayCD(i) {
     xmlhttp.send();
 }
 function myFunction(xml, i) {
-	var sumdc=0;
-	var sumsg=0;
+	var sumdc,sumsg;
     var xmlDoc = xml.responseXML; 
     x = xmlDoc.getElementsByTagName("STATION");
     document.getElementById("freq").innerHTML = x[9].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
      document.getElementById("timeblock").innerHTML = x[9].getElementsByTagName("BLK")[0].childNodes[0].nodeValue;
-    for(i=0;i<=30;i++)
+     sumdc=x[0].getElementsByTagName("DC")[0].childNodes[0].nodeValue;
+    	sumsg=x[0].getElementsByTagName("SG")[0].childNodes[0].nodeValue;
+    for(i=1;i<=5;i++)
     {
     	sumdc=(sumdc+x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue);
     	sumsg=(sumsg+x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue);
