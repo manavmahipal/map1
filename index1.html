@@ -841,7 +841,7 @@ function myFunction(xml, i) {
 	i++;
 	i++;
     document.getElementById("koldam").innerHTML =
-    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='background: #f4e9cc;'><b>DC</b></td><td style='background: #c8f4f3;'><b>SG</b></td><td  style='background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr style='border: 1px solid #07aaf9;'><td style='background: #f4e9cc;'><b>DC</b></td><td style='background: #c8f4f3;'><b>SG</b></td><td  style='background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
     x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"MW</td><td style='background: #c8f4f3;'>" +
     x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"MW</td><td style='background: #d0f4c8;'>" + 
     (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"MW</td></tr></table>";
