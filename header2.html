@@ -189,8 +189,8 @@ function myFunction(xml, i) {
      document.getElementById("timeblock").innerHTML = x[9].getElementsByTagName("BLK")[0].childNodes[0].nodeValue;
     for(i=0;i<=30;i++)
     {
-    	sumdc=sumdc+x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue;
-    	sumsg=sumsg+x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue;
+    	sumdc=(sumdc+x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue);
+    	sumsg=(sumsg+x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue);
     }
     document.getElementById("available").innerHTML=sumdc;
     document.getElementById("scheduled").innerHTML=sumsg;
