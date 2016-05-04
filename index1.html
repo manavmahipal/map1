@@ -847,13 +847,13 @@ function myFunction(xml, i) {
 	i++;
 	i++;
     document.getElementById("koldam").innerHTML =
-    "DC : " +
+    "<table><tr><td>DC</td><td>SG</td><td>URS</td></tr><tr><td>" +
     x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +
-    " MW<br>SG : " +
+    " MW</td><td>" +
     x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +    
-    " MW<br>URS: " + 
+    " MW</td><td>" + 
     (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +
-    " MW<br>";
+    " MW</td></tr></table>";
 	i++;
     document.getElementById("bongaigaon").innerHTML =
     "DC : " +
