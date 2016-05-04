@@ -22,7 +22,8 @@ function displayCD(i) {
     xmlhttp.send();
 }
 function myFunction(xml, i) {
-	var sumdc,sumsg;
+	var sumdc=0;
+	var sumsg=0;
     var xmlDoc = xml.responseXML; 
     x = xmlDoc.getElementsByTagName("STATION");
     document.getElementById("freq").innerHTML = x[9].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
