@@ -8,6 +8,33 @@
 
 </head>
 <body style="background-color:#B1F3FC;margin-top:-3%;padding-top:0px">
+	
+<script>
+displayCD(0);
+function displayCD(i) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            myFunction(xmlhttp, i);
+        }
+    };
+    xmlhttp.open("GET", "./appview.xml", true);
+    xmlhttp.send();
+}
+function myFunction(xml, i) {
+	var sumdc,sumsg;
+    var xmlDoc = xml.responseXML; 
+    x = xmlDoc.getElementsByTagName("STATION");
+    document.getElementById("freq").innerHTML = x[9].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
+     document.getElementById("timeblock").innerHTML = x[9].getElementsByTagName("BLK")[0].childNodes[0].nodeValue;
+     sumdc=x[0].getElementsByTagName("DC")[0].childNodes[0].nodeValue+x[1].getElementsByTagName("DC")[0].childNodes[0].nodeValue;
+    	sumsg=x[0].getElementsByTagName("SG")[0].childNodes[0].nodeValue+x[1].getElementsByTagName("SG")[0].childNodes[0].nodeValue;
+    
+    document.getElementById("available").innerHTML=sumdc;
+    document.getElementById("scheduled").innerHTML=sumsg;
+}
+</script>
+
 <table cellpadding="0" cellspacing="0" style="border: none;height:100%; width:100%;margin-top:-2%;padding-top:0px ">
     <tr style="height:33%;"><td align="center" >
         <table cellpadding="0" cellspacing="0" style="height:100%; width:100%; ">
@@ -166,36 +193,6 @@
 today = new Date();
 var dateString = today.format("dd mmm, yyyy  h:MM TT");
 document.getElementById("demo").innerHTML = dateString;
-</script>
-
-<script>
-displayCD(0);
-function displayCD(i) {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            myFunction(xmlhttp, i);
-        }
-    };
-    xmlhttp.open("GET", "./appview.xml", true);
-    xmlhttp.send();
-}
-function myFunction(xml, i) {
-	var sumdc,sumsg;
-    var xmlDoc = xml.responseXML; 
-    x = xmlDoc.getElementsByTagName("STATION");
-    document.getElementById("freq").innerHTML = x[9].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
-     document.getElementById("timeblock").innerHTML = x[9].getElementsByTagName("BLK")[0].childNodes[0].nodeValue;
-     sumdc=x[0].getElementsByTagName("DC")[0].childNodes[0].nodeValue;
-    	sumsg=x[0].getElementsByTagName("SG")[0].childNodes[0].nodeValue;
-    for(i=1;i<=5;i++)
-    {
-    	sumdc=(sumdc+x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue);
-    	sumsg=(sumsg+x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue);
-    }
-    document.getElementById("available").innerHTML=sumdc;
-    document.getElementById("scheduled").innerHTML=sumsg;
-}
 </script>
 
 </body>
