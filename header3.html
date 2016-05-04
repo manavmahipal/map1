@@ -1,16 +1,59 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=.5, maximum-scale=12.0, minimum-scale=.25, user-scalable=yes"/>
-<meta http-equiv="refresh" content="5">
+<meta http-equiv="refresh" content="10">
 
 		<title>NTPC Mobile app</title>
-<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" >
+<style>
+	#jquery-script-menu {
+position: fixed;
+height: 90px;
+width: 100%;
+top: 0;
+left: 0;
+border-top: 5px solid #316594;
+background: #fff;
+-moz-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+-webkit-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+z-index: 999999;
+padding: 10px 0;
+-webkit-box-sizing:content-box;
+-moz-box-sizing:content-box;
+box-sizing:content-box;
+}
+
+.jquery-script-center {
+width: 960px;
+margin: 0 auto;
+}
+.jquery-script-center ul {
+width: 212px;
+float:left;
+line-height:45px;
+margin:0;
+padding:0;
+list-style:none;
+}
+.jquery-script-center a {
+	text-decoration:none;
+}
+.jquery-script-ads {
+width: 728px;
+height:90px;
+float:right;
+}
+.jquery-script-clear {
+clear:both;
+height:0;
+}
+</style>
+<link rel="stylesheet" href="./bootstrap.min.css" >
 
 
 </head>
-<body style="background-color:#B1F3FC;margin-top:0px;padding-top:0px">
-<div class="container">
+<body style="background-color:#B1F3FC;margin-top:0px;padding-top:0px,width:100%;">
+<div class="container" style="width:100%;">
 
 <table cellpadding="0" cellspacing="0" style="border: none;height:100%; width:100%;margin-top:0px;padding-top:0px ">
     <tr style="height:33%;"><td align="center" >
@@ -181,7 +224,7 @@ document.getElementById("demo").innerHTML = dateString;
 
 
 
-<script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
+<script src="./jquery-1.12.1.min.js"></script>
 <script src="./nylautowriter.jquery.js"></script>
 <!-- 
 $('#demo1').NylAutoWriter({color: "white"});
