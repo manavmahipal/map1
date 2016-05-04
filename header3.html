@@ -83,6 +83,35 @@ height:0;
 
 
 <script>
+displayCD(0);
+function displayCD(i) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            myFunction(xmlhttp, i);
+        }
+    };
+    xmlhttp.open("GET", "./appview.xml", true);
+    xmlhttp.send();
+}
+function myFunction(xml, i) {
+	var sumdc=0;
+	var sumsg=0;
+    var xmlDoc = xml.responseXML; 
+    x = xmlDoc.getElementsByTagName("STATION");
+    document.getElementById("freq").innerHTML = x[9].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
+     document.getElementById("timeblock").innerHTML = x[9].getElementsByTagName("BLK")[0].childNodes[0].nodeValue;
+    for(i=0;i<=30;i++)
+    {
+    	sumdc=sumdc+x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue;
+    	sumsg=sumsg+x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue;
+    }
+    document.getElementById("available").innerHTML=sumdc;
+    document.getElementById("scheduled").innerHTML=sumsg;
+}
+</script>
+
+<script>
 /*
      * Date Format 1.2.3
      * (c) 2007-2009 Steven Levithan <stevenlevithan.com>
@@ -288,35 +317,6 @@ color: 'black',
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-</script>
-
-<script>
-displayCD(0);
-function displayCD(i) {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            myFunction(xmlhttp, i);
-        }
-    };
-    xmlhttp.open("GET", "./appview.xml", true);
-    xmlhttp.send();
-}
-function myFunction(xml, i) {
-	var sumdc=0;
-	var sumsg=0;
-    var xmlDoc = xml.responseXML; 
-    x = xmlDoc.getElementsByTagName("STATION");
-    document.getElementById("freq").innerHTML = x[9].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
-     document.getElementById("timeblock").innerHTML = x[9].getElementsByTagName("BLK")[0].childNodes[0].nodeValue;
-    for(i=0;i<=32;i++)
-    {
-    	sumdc=sumdc+x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue;
-    	sumsg=sumsg+x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue;
-    }
-    document.getElementById("available").innerHTML=sumdc;
-    document.getElementById("scheduled").innerHTML=sumsg;
-}
 </script>
 
 </body>
