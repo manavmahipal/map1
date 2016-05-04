@@ -11,8 +11,8 @@
     var jsonApi = "http://www.indianpowerstations.org/wap/xmltojson.asp"
 	$.getJSON(jsonApi, function(data) {
         var output="<ul>";
-        for (var i in jsonApi.results) {
-            output+="<li>" + data.results[i].name + " " + data.results[i].lastname + "--" + data.results[i].address+"</li>";
+        for (var i in data.records) {
+            output+="<li>" + data.records[i].Name + " " + data.records[i].Time + "--" + data.records[i].Type+"</li>";
         }
 
         output+="</ul>";
