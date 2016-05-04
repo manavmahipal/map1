@@ -29,7 +29,7 @@
     </td></tr>
 </table>
 
-
+<table><tr><td><div id="available1"></div></td><td><div id="scheduled1"></div></td></tr></table>
 	
 <script>
 displayCD(0);
@@ -57,8 +57,8 @@ sumdc += x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue+"<br/>";
   //  sumdc += parseInt(x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue);
  //   sumsg += parseInt(x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue);
 }
-    document.getElementById("available").innerHTML=sumdc;
-    document.getElementById("scheduled").innerHTML=sumsg;
+    document.getElementById("available1").innerHTML=sumdc;
+    document.getElementById("scheduled1").innerHTML=sumsg;
 }
 </script>
 
