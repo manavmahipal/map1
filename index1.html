@@ -122,6 +122,11 @@ width: 100%;
   
      <img src="./india.png" style="height:100%; width:100%; vertical-align: top;"/>
     
+<div style="position:absolute; left:50%; top:2%; font-size: 20px;width:60%;">
+          <a class='button' href="#" style="background: rgba(50, 25, 200, .7); font-size: 18px; color: #ebf1fd;">
+      &nbsp;&nbsp;&nbsp;&nbsp;Last Updated on : <div id="updatetime" style="display: inline-block; "></div>&nbsp;&nbsp;
+      </a>
+</div>
 
 <div style="position:absolute; left:33%; top:19%; font-size: 15px;">
           &bull;<a class='button' href="#koldampop" style="background: rgba(50, 25, 200, .7); font-size: 8px; color: #ebf1fd;">
@@ -555,6 +560,17 @@ function displayCD(i) {
 function myFunction(xml, i) {
     var xmlDoc = xml.responseXML; 
     x = xmlDoc.getElementsByTagName("STATION");
+    for (i = 0; i<=20; i++) {
+  	if(!x[i].getElementsByTagName("TIME")[0].childNodes[0])	{
+		}
+		else
+		{
+		 document.getElementById("updatetime").innerHTML = x[10].getElementsByTagName("TIME")[0].childNodes[0].nodeValue;
+			break;
+		}
+    	
+}
+   
     document.getElementById("singrauli").innerHTML =
     "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
     x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
