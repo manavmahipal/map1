@@ -115,14 +115,7 @@ function myFunction(xml, i) {
     	document.getElementById("uirate").innerHTML = "no data";
     }}
     */
-    for (i = 0; i<=47; i++) {
-  if(typeof(x[i].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue) == "undefined"){
-  	document.getElementById("freq").innerHTML = "no data";
-  }else{
-  		document.getElementById("freq").innerHTML = x[9].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
-  		break;
-  }
-}
+    
 //document.getElementById("freq").innerHTML = x[1].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
     document.getElementById("timeblock").innerHTML = x[1].getElementsByTagName("BLK")[0].childNodes[0].nodeValue;
     	document.getElementById("uirate").innerHTML = x[1].getElementsByTagName("UICOST")[0].childNodes[0].nodeValue;	
