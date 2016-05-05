@@ -115,8 +115,9 @@ function myFunction(xml, i) {
     	document.getElementById("uirate").innerHTML = "no data";
     }}
     */
-    for (i = 9; i<=10; i++) {
+    for (i = 9; i<=15; i++) {
   alert(x[i].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue);
+  i=i+3;
 }
 //document.getElementById("freq").innerHTML = x[1].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
     document.getElementById("timeblock").innerHTML = x[1].getElementsByTagName("BLK")[0].childNodes[0].nodeValue;
