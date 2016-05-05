@@ -116,9 +116,11 @@ function myFunction(xml, i) {
     }}
     */
     for (i = 0; i<=47; i++) {
-  if(x[i].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue!=undefined){
+  if(typeof(x[i].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue) == "undefined"){
   	document.getElementById("freq").innerHTML = "no data";
-  	break;
+  }else{
+  		document.getElementById("freq").innerHTML = x[i].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
+  		break;
   }
 }
 //document.getElementById("freq").innerHTML = x[1].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
