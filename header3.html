@@ -103,6 +103,7 @@ function myFunction(xml, i) {
     x = xmlDoc.getElementsByTagName("STATION");
     document.getElementById("freq").innerHTML = x[9].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
      document.getElementById("timeblock").innerHTML = x[9].getElementsByTagName("BLK")[0].childNodes[0].nodeValue;
+     document.getElementById("uirate").innerHTML = x[10].getElementsByTagName("BLK")[0].childNodes[0].nodeValue;
  
 
 for (i = 0; i<=47; i++) {
