@@ -158,11 +158,12 @@ for (i = 0; i<=20; i++) {
 		{
 			if(x[i].getElementsByTagName("UICOST")[0].childNodes[0].nodeValue<0){
 			document.getElementById("uicost").innerHTML = -(x[i].getElementsByTagName("UICOST")[0].childNodes[0].nodeValue)+"data";
-			break;
+			
 			}else{
 			document.getElementById("uicost").innerHTML = "no neagtive"+x[i].getElementsByTagName("UICOST")[0].childNodes[0].nodeValue;
-			break;	
+		
 			}
+			break;
 		}
     	
 }
