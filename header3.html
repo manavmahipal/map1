@@ -104,6 +104,11 @@ function myFunction(xml, i) {
     
     if(x[9].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue!=undefined){
     	document.getElementById("freq").innerHTML = x[9].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
+    }else{
+    if(x[1].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue!=undefined){
+    	document.getElementById("freq").innerHTML = x[1].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
+    }else{
+    	document.getElementById("freq").innerHTML = "no data";
     }
 //document.getElementById("freq").innerHTML = x[9].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
 //     document.getElementById("timeblock").innerHTML = x[10].getElementsByTagName("BLK")[0].childNodes[0].nodeValue;
