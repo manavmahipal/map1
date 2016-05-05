@@ -72,7 +72,7 @@ height:0;
         	</td></tr></table>
     </td></tr>
     <tr style="height:33%;"><td align="center" style="background: #eae57e;" >
-      <marquee style="margin-left:10px;" loop="infinite" behavior="scroll" direction="left" scrollamount="10" style="height:100%;"> <table cellpadding="0" cellspacing="0" style="margin-left:10%;height:100%; width:100%; ">
+      <marquee loop="infinite" behavior="scroll" direction="left" scrollamount="10" style="height:100%;"> <table cellpadding="0" cellspacing="0" style="margin-left:10%;height:100%; width:100%; ">
         	<tr><td style="border-bottom: 1px dotted #1d41b7; width:15%;text-align: left;font-size: 105%;background: #87ecf0;">&nbsp;Total NTPC : 
         	</td><td style="border-bottom: 1px dotted #1d41b7; width:32%;text-align: left;font-size: 105%;background: #f4e9cc;">&nbsp;Available(DC) : <b><u><div id="available" style="display: inline-block; font-size: 105%;"></div></u></b>&nbsp;MW
         	</td><td style="border-bottom: 1px dotted #1d41b7;font-size: 105%; width:33%;text-align: center;background: #c8f4f3;">
@@ -157,7 +157,7 @@ for (i = 0; i<=20; i++) {
 		else
 		{
 			if(x[i].getElementsByTagName("UICOST")[0].childNodes[0].nodeValue<0){
-			document.getElementById("uicost").innerHTML = -(x[i].getElementsByTagName("UICOST")[0].childNodes[0].nodeValue);
+			document.getElementById("uicost").innerHTML = -(x[i].getElementsByTagName("UICOST")[0].childNodes[0].nodeValue)+"data";
 			break;
 			}else{
 			document.getElementById("uicost").innerHTML = "no neagtive"+x[i].getElementsByTagName("UICOST")[0].childNodes[0].nodeValue;
