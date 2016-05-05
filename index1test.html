@@ -128,7 +128,7 @@ function myFunction(xml, i) {
     document.getElementById("timeblock").innerHTML = x[1].getElementsByTagName("BLK")[0].childNodes[0].nodeValue;
     	document.getElementById("uirate").innerHTML = x[1].getElementsByTagName("UICOST")[0].childNodes[0].nodeValue;	
    
-  for (i = 0; i<=20; i++) {
+  for (i = 9; i<=20; i++) {
   	if(x[i].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue != undefined && x[i].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue != null && x[i].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue != " " && x[i].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue != "" )
 		{
 			window.alert("no data"+i);
