@@ -102,7 +102,7 @@ function myFunction(xml, i) {
     var xmlDoc = xml.responseXML; 
     x = xmlDoc.getElementsByTagName("STATION");
     
-    if(x[9].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue!=NULL){
+    if(x[9].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue!=undefined){
     	document.getElementById("freq").innerHTML = x[9].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
     }
 //document.getElementById("freq").innerHTML = x[9].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
