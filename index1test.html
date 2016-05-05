@@ -130,6 +130,9 @@ function myFunction(xml, i) {
    
    for (i = 9; i<=15; i++) {
    alert(x[i].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue);
+   if(typeof(x[i].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue) != "undefined"){
+   	alert(x[i].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue);
+   }
 }
     	
 }
