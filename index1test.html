@@ -115,6 +115,14 @@ function myFunction(xml, i) {
     	document.getElementById("uirate").innerHTML = "no data";
     }}
     */
+    for (i = 0; i<=47; i++) {
+   sumdc += parseInt(x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue);
+    sumsg += parseInt(x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue);
+}
+    document.getElementById("available").innerHTML=sumdc;
+    document.getElementById("scheduled").innerHTML=sumsg;
+    document.getElementById("urs").innerHTML=sumdc-sumsg;
+}
     for (i = 9; i<=15; i++) {
   alert(x[i].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue);
   i=i+3;
@@ -124,14 +132,7 @@ function myFunction(xml, i) {
     	document.getElementById("uirate").innerHTML = x[1].getElementsByTagName("UICOST")[0].childNodes[0].nodeValue;	
     	
 
-for (i = 0; i<=47; i++) {
-   sumdc += parseInt(x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue);
-    sumsg += parseInt(x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue);
-}
-    document.getElementById("available").innerHTML=sumdc;
-    document.getElementById("scheduled").innerHTML=sumsg;
-    document.getElementById("urs").innerHTML=sumdc-sumsg;
-}
+
 </script>
 
 
