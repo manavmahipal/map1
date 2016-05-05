@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+       <meta name="viewport" content="width=device-width, initial-scale=.5, maximum-scale=12.0, minimum-scale=.25, user-scalable=yes"/>
+       <meta http-equiv="refresh" content="100">
+       <title>NTPC Mobile App</title>
+       <style>
+       	.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(./Preloader_2.gif) center no-repeat #fff;
+}
+       </style>
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+ <script>
+//paste this code under the head tag or in a separate js file.
+	// Wait for window load
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+	</script>
+        <style>
+html, body { 
+width: 100%;
+    height: 100%;	
+    margin-top:0px;
+    margin-left:0px;
+}
+.img{height:100%; width:100%; vertical-align: top;margin-left:0px;margin-top:0px;}
+.box {
+  width: 20%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 5px;
+  border: 2px solid #fff;
+  border-radius: 1px/2px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 1px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 0px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 1s ease-in-out;
+}
+
+.popup h3 {
+  margin-top: 0;
+  margin-left: 2;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  
+  overflow: auto;
+}
+
+</style>
+</style>
+</head>
+    <body>
+  
+     <img src="./india.png" style="height:100%; width:100%; vertical-align: top;"/>
+    
+
+<div style="position:absolute; left:33%; top:19%; font-size: 15px;">
+          &bull;<a class='button' href="#koldampop" style="background: rgba(50, 25, 200, .7); font-size: 8px; color: #ebf1fd;">
+      KOLDAM
+      </a>
+</div>
+    
+
+<div style="position:absolute; left:34%; top:28%; font-size: 15px;">
+          &bull;<a class='button' href="#dadripop" style="background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      DADRI
+      </a>  
+</div>
+     
+
+<div style="position:absolute; right:67.2%; top:28.8%; font-size: 15px;">
+        <a class='button' href="#badarpurpop" style="background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+     BADARPUR 
+      </a>&bull;
+</div>
+      
+
+<div style="position:absolute; right:66.5%; top:30.3%; font-size: 15px;">
+         <a class='button' href="#faridabadpop" style="top:30.5%;background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      FARIDABAD
+      </a>&bull;
+</div>
+      
+
+<div style="position:absolute; left:23.5%; top:39%; font-size: 15px;">
+            <a class='button' href="#antapop" style="background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      ANTA
+      </a>&bull;
+</div>
+     
+
+
+
+<div style="position:absolute; right:80%; top:49%; font-size: 15px;">
+           <a class='button' href="#jhanorpop" style="background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      JHANOR
+      </a>&bull;
+</div>
+      
+
+
+
+<div style="position:absolute; right:82%; top:51.5%; font-size: 15px;">
+           <a class='button' href="#kawaspop" style="background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      KAWAS
+      </a>&bull;
+</div>
+      
+      
+      
+      <div style="position:absolute; right:70%; top:93%; font-size: 15px;">
+           <a class='button' href="#kayamkulampop" style="background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      KAYAMKULAM
+      </a>&bull;
+</div>
+      
+      
+      <div style="position:absolute; left:50%; top:43%; font-size: 15px;">
+           &bull;<a class='button' href="#singraulipop" style="position:absolute;top:40%;background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      SINGRAULI
+      </a>
+</div>
+      
+
+<div style="position:absolute; left:49.5%; top:44%; font-size: 15px;">
+           &bull;<a class='button' href="#rihandpop" style="position:absolute;top:46%;background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      RIHAND
+      </a>
+</div>
+     
+       <div style="position:absolute; right:50.5%; top:43.5%; font-size: 15px;">
+           <a class='button' href="#vindhyachalpop" style="background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      VINDHYACHAL
+      </a>&bull;
+</div>
+      
+      <div style="position:absolute; left:46%; top:38.5%; font-size: 15px;">
+           &bull;<a class='button' href="#unchaharpop" style="background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      UNCHAHAR
+      </a>
+</div>
+      
+      
+      <div style="position:absolute; left:49%; top:36%; font-size: 15px;">
+           &bull;<a class='button' href="#tandapop" style="background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      TANDA
+      </a>
+</div>
+      
+      
+      <div style="position:absolute; left:40%; top:35%; font-size: 15px;">
+           &bull;<a class='button' href="#auraiyapop" style="background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      AURAIYA
+      </a>
+</div>
+      
+      
+      <div style="position:absolute; left:50.5%; top:49.3%; font-size: 15px;">
+           &bull;<a class='button' href="#korbapop" style="background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      KORBA
+      </a>
+</div>
+      
+      <div style="position:absolute; right:50%; top:50.1%; font-size: 15px;">
+          <a class='button' href="#sipatpop" style="background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      SIPAT
+      </a>&bull;
+</div>
+      
+      
+      <div style="position:absolute; left:41%; top:54%; font-size: 15px;">
+           &bull;<a class='button' href="#maudapop" style="background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      MAUDA
+      </a>
+</div>
+      
+      
+      <div style="position:absolute; left:41%; top:62%; font-size: 15px;">
+           &bull;<a class='button' href="#ramagundampop" style="background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      RAMAGUNDAM
+      </a>
+</div>
+      
+      
+      <div style="position:absolute; left:53%; top:63.3%; font-size: 15px;">
+           &bull;<a class='button' href="#simhadripop" style="background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      SIMHADRI
+      </a>
+</div>
+      
+      
+      <div style="position:absolute; right:41%; top:52.5%; font-size: 15px;">
+           <a class='button' href="#talcherpop" style="background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      TALCHER
+      </a>&bull;
+</div>
+      
+      
+      <div style="position:absolute; left:59%; top:53%; font-size: 15px;">
+           &bull;<a class='button' href="#kanihapop" style=" background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      TALCHER KANIHA
+      </a>
+</div>
+      
+      
+      <div style="position:absolute; left:67.9%; top:42%; font-size: 15px;">
+           &bull;<a class='button' href="#farakkapop" style="background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      FARAKKA
+      </a>
+</div>
+      
+      
+      <div style="position:absolute; right:35%; top:41%; font-size: 15px;">
+           <a class='button' href="#kahalgaonpop" style="background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      KAHALGAON
+      </a>&bull;
+</div>
+      
+      
+      <div style="position:absolute; left:62%; top:39.5%; font-size: 15px;">
+           &bull;<a class='button' href="#barhpop" style="background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      BARH
+      </a>
+</div>
+      
+      
+      <div style="position:absolute; left:75%; top:35.5%; font-size: 15px;">
+           &bull;<a class='button' href="#bongaigaonpop" style="background: rgba(50, 25, 200, .7); font-size: 10px; color: #ebf1fd;">
+      BONGAIGAON
+      </a>
+</div>
+      
+<div id="koldampop" class="overlay">
+	<div class="popup" style="position:absolute; left:25%; top:10%; width:30%;">
+	<h3>Koldam</h3><a class="close" href="index1.html">&times;</a>
+		<div id="koldam" class="content" style="text-align:center;"></div>
+	</div>
+</div>
+
+<div id="dadripop" class="overlay">
+	<div class="popup" style="position:absolute; left:25%; top:10%; width:30%;">
+	<h3>Dadri</h3><a class="close" href="index1.html">&times;</a>
+		<div id="dadri" class="content" ></div>
+	</div>
+</div>
+    
+    
+<div id="badarpurpop" class="overlay">
+	<div class="popup" style="position:absolute; right:61.2%; top:19.8%; width:25%;">
+		<h3>Badarpur</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="badarpur" class="content">
+			
+		</div>
+	</div>
+</div>
+<div id="faridabadpop" class="overlay">
+	<div class="popup" style="position:absolute; right:60.5%; top:21.3%; width:25%;">
+		<h3>Faridabad</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="faridabad" class="content">
+			
+		</div>
+	</div>
+</div>
+<div id="antapop" class="overlay">
+	<div class="popup" style="position:absolute; left:17.5%; top:30%; width:25%;">
+		<h3>Anta</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="anta" class="content">
+			
+		</div>
+	</div>
+</div>
+<div id="jhanorpop" class="overlay">
+	<div class="popup" style="position:absolute; right:74%; top:40%; width:25%;">
+		<h3>Jhanor</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="jhanor" class="content">
+			
+		</div>
+	</div>
+</div>
+<div id="kawaspop" class="overlay">
+	<div class="popup" style="position:absolute; right:74%; top:42.5%; width:25%;">
+		<h3>Kawas</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="kawas" class="content">
+			
+		</div>
+	</div>
+</div>
+<div id="kayamkulampop" class="overlay">
+	<div class="popup" style="position:absolute; right:64%; bottom:7%; width:25%;">
+		<h3>Kayamkulam</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="kayamkullam" class="content">
+			
+		</div>
+	</div>
+</div>  
+<div id="singraulipop" class="overlay">
+	<div class="popup" style="position:absolute; left:44%; top:34%; width:25%;">
+		<h3>Singrauli</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="singrauli" class="content">
+			
+		</div>
+	</div>
+</div>  
+  
+<div id="rihandpop" class="overlay">
+	<div class="popup" style="position:absolute; left:43.5%; top:35%; width:25%;">
+		<h3>Rihand</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="rihand" class="content">
+			
+		</div>
+	</div>
+</div>  
+  
+<div id="vindhyachalpop" class="overlay">
+	<div class="popup" style="position:absolute; right:44.5%; top:34.5%; width:25%;">
+		<h3>Vindhyachal</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="vindhyachal" class="content">
+			
+		</div>
+	</div>
+</div>  
+  
+<div id="unchaharpop" class="overlay">
+	<div class="popup" style="position:absolute; left:40%; top:29.5%; width:25%;">
+		<h3>Unchahar</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="unchahar" class="content">
+			
+		</div>
+	</div>
+</div>  
+  
+<div id="tandapop" class="overlay">
+	<div class="popup" style="position:absolute; left:43%; top:27%; width:25%;">
+		<h3>Tanda</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="tanda" class="content">
+			
+		</div>
+	</div>
+</div>  
+  
+<div id="auraiyapop" class="overlay">
+	<div class="popup" style="position:absolute; left:34%; top:26%; width:25%;">
+		<h3>Auraiya</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="auraiya" class="content">
+			
+		</div>
+	</div>
+</div>  
+  
+<div id="korbapop" class="overlay">
+	<div class="popup" style="position:absolute; left:44.5%; top:40.3%; width:25%;">
+		<h3>Korba</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="korba" class="content">
+			
+		</div>
+	</div>
+</div>  
+  
+<div id="sipatpop" class="overlay">
+	<div class="popup" style="position:absolute; right:44%; top:41.1%; width:25%;">
+		<h3>Sipat</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="sipat" class="content">
+			
+		</div>
+	</div>
+</div>  
+  
+<div id="maudapop" class="overlay">
+	<div class="popup" style="position:absolute; left:35%; top:45%; width:25%;">
+		<h3>Mauda</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="mauda" class="content">
+			
+		</div>
+	</div>
+</div>  
+  
+<div id="ramagundampop" class="overlay">
+	<div class="popup" style="position:absolute; left:35%; top:53%; width:25%;">
+		<h3>Ramagundam</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="ramagundam" class="content">
+			
+		</div>
+	</div>
+</div>  
+  
+<div id="simhadripop" class="overlay">
+	<div class="popup" style="position:absolute; left:36%; top:54.3%; width:25%;">
+		<h3>Simhadri</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="simhadri" class="content">
+			
+		</div>
+	</div>
+</div>  
+  
+<div id="talcherpop" class="overlay">
+	<div class="popup" style="position:absolute; right:35%; top:43.5%; width:25%;">
+		<h3>Talcher</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="talcher" class="content">
+			
+		</div>
+	</div>
+</div>  
+  
+<div id="kanihapop" class="overlay">
+	<div class="popup" style="position:absolute; left:53%; top:44%; width:25%;">
+		<h3>Talcher Kaniha</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="kaniha" class="content">
+			
+		</div>
+	</div>
+</div>  
+  
+<div id="farakkapop" class="overlay">
+	<div class="popup" style="position:absolute; left:61.9%; top:33%; width:25%;">
+		<h3>Farakka</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="farakka" class="content">
+			
+		</div>
+	</div>
+</div> 
+  
+<div id="kahalgaonpop" class="overlay">
+	<div class="popup" style="position:absolute; right:29%; top:32%; width:25%;">
+		<h3>Kahalgaon</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="kahalgaon" class="content">
+			
+		</div>
+	</div>
+</div> 
+  
+<div id="barhpop" class="overlay">
+	<div class="popup" style="position:absolute; left:56%; top:30.5%; width:25%;">
+		<h3>Barh</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="barh" class="content">
+			
+		</div>
+	</div>
+</div> 
+  
+<div id="bongaigaonpop" class="overlay">
+	<div class="popup" style="position:absolute; left:69%; top:26.5%; width:25%;">
+		<h3>Bongaigaon</h3>
+		<a class="close" href="index1.html">&times;</a>
+		<div id="bongaigaon" class="content">
+			
+		</div>
+	</div>
+</div>  
+
+<script>
+displayCD(0);
+
+function displayCD(i) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            myFunction(xmlhttp, i);
+        }
+    };
+    xmlhttp.open("GET", "./appview.xml", true);
+    xmlhttp.send();
+}
+
+function myFunction(xml, i) {
+    var xmlDoc = xml.responseXML; 
+    x = xmlDoc.getElementsByTagName("STATION");
+    document.getElementById("singrauli").innerHTML =
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+    document.getElementById("rihand").innerHTML =
+   "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - III</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+2].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i+2].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+        i++;
+	i++;
+	i++;
+    document.getElementById("unchahar").innerHTML =
+     "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - III</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+2].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i+2].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+       	i++;
+	i++;
+	i++;
+    document.getElementById("tanda").innerHTML =
+     "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+    document.getElementById("badarpur").innerHTML =
+   "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+    document.getElementById("dadri").innerHTML =
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Dadri-Gas</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+4].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+4].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+4].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i+4].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+       	i++;
+	i++;
+    document.getElementById("auraiya").innerHTML =
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+    document.getElementById("anta").innerHTML =
+   "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+	i++;
+    document.getElementById("faridabad").innerHTML =
+   "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+    document.getElementById("korba").innerHTML =
+     "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>";
+     i++;
+	i++;
+    document.getElementById("vindhyachal").innerHTML =
+     "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - III</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+2].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+2].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i+2].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - IV</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+3].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+3].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+3].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i+3].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - V</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+4].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+4].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+4].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i+4].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+	i++;
+	i++;
+	i++;
+	i++;
+    document.getElementById("sipat").innerHTML =
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+      	i++;
+	i++;
+    document.getElementById("kawas").innerHTML =
+   "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+    document.getElementById("jhanor").innerHTML =
+   "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+    document.getElementById("farakka").innerHTML =
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+	i++;
+    document.getElementById("kahalgaon").innerHTML =
+   "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+	i++;
+    document.getElementById("kaniha").innerHTML =
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+     i++;
+	i++;
+	document.getElementById("talcher").innerHTML =
+"<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+    document.getElementById("barh").innerHTML =
+   "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+    document.getElementById("ramagundam").innerHTML =
+     "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+	i++;
+    document.getElementById("kayamkullam").innerHTML =
+  "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+    document.getElementById("simhadri").innerHTML =
+     "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+	i++;
+    document.getElementById("koldam").innerHTML =
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+    document.getElementById("bongaigaon").innerHTML =
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+    document.getElementById("mauda").innerHTML =
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - I</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr>" +
+    "<tr><td colspan='3' style='text-align:center;border-bottom: 1px solid #caf6f1;background: #fbcdf7;'><b>Stage - II</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i+1].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i+1].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+	i++;
+    document.getElementById("kanti").innerHTML =
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+    document.getElementById("ratnagiri").innerHTML =
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+    document.getElementById("bhilai").innerHTML =
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+    document.getElementById("jhajjhar").innerHTML =
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+    document.getElementById("vallur").innerHTML =
+    "<table align='center' cellpadding='0' cellspacing='0' style='text-align:center;width:90%;'><tr><td style='border-bottom: 1px solid #07aaf9;background: #f4e9cc;'><b>DC</b></td><td style='border-bottom: 1px solid #07aaf9;background: #c8f4f3;'><b>SG</b></td><td  style='border-bottom: 1px solid #07aaf9;background: #d0f4c8;'><b>URS</b></td></tr><tr><td style='background: #f4e9cc;'>" +
+    x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue +"</td><td style='background: #c8f4f3;'>" +
+    x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue +"</td><td style='background: #d0f4c8;'>" + 
+    (x[i].getElementsByTagName("DC")[0].childNodes[0].nodeValue-x[i].getElementsByTagName("SG")[0].childNodes[0].nodeValue) +"</td></tr></table>";
+	i++;
+}
+</script>       
+        
+    </body>
+</html>
