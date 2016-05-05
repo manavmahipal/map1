@@ -125,21 +125,42 @@ function myFunction(xml, i) {
 
     
 //document.getElementById("freq").innerHTML = x[1].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
-    document.getElementById("timeblock").innerHTML = x[1].getElementsByTagName("BLK")[0].childNodes[0].nodeValue;
+    document.getElementById("timeblock").innerHTML = x;
     	document.getElementById("uirate").innerHTML = x[1].getElementsByTagName("UICOST")[0].childNodes[0].nodeValue;	
    
-  for (i = 9; i<=20; i++) {
+  for (i = 0; i<=20; i++) {
   	if(!x[i].getElementsByTagName("FREQ")[0].childNodes[0])	{
 		}
 		else
 		{
-			document.getElementById("freq").innerHTML = x[1].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
+			document.getElementById("freq").innerHTML = x[i].getElementsByTagName("FREQ")[0].childNodes[0].nodeValue;
 			break;
 		}
     	
 }
 	
-	
+for (i = 0; i<=20; i++) {
+  	if(!x[i].getElementsByTagName("BLK")[0].childNodes[0].nodeValue)	{
+		}
+		else
+		{
+			document.getElementById("timeblock").innerHTML = x[i].getElementsByTagName("BLK")[0].childNodes[0].nodeValue;
+			break;
+		}
+    	
+}
+
+
+for (i = 0; i<=20; i++) {
+  	if(!x[1].getElementsByTagName("UICOST")[0].childNodes[0].nodeValue)	{
+		}
+		else
+		{
+			document.getElementById("uirate").innerHTML = x[i].getElementsByTagName("UICOST")[0].childNodes[0].nodeValue;
+			break;
+		}
+    	
+}
 	
 	
 }
